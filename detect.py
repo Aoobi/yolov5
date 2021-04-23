@@ -111,7 +111,7 @@ def detect(opt):
                     if save_img or opt.save_crop or view_img:  # Add bbox to image
                         c = int(cls)  # integer class
                         label = f'{names[c]} {conf:.2f}'
-                        plot_one_box(xyxy, im0, label=label, color=colors[c], line_thickness=3)
+                        plot_one_box(xyxy, im0, label=label, color=colors[c], line_thickness=1)
                         if opt.save_crop:
                             save_one_box(xyxy, im0s, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
 
